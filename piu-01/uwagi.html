@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uwagi o formularzach HTML</title>
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Uwagi o formularzach HTML</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Kiedy warto ich używać</h2>
+            <ul>
+                <li>Do prostych rzeczy, np. logowania, kontaktu czy wyszukiwarki.</li>
+                <li>Działają bez JavaScriptu, więc nie trzeba pisać żadnego skryptu.</li>
+                <li>Przeglądarka sprawdza dane za nas (required, type="email", min, max, maxlength).</li>
+                <li>Są gotowe kontrolki: kalendarz, wybór koloru, lista z podpowiedziami.</li>
+                <li>Z label połączonym z polem są wygodne z klawiatury i dla czytników ekranu.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Kiedy nie wystarczą</h2>
+            <ul>
+                <li>Wygląd kontrolek zależy od przeglądarki i systemu, np. format daty.</li>
+                <li>Kalendarza, rozwiniętej listy i okna wyboru koloru nie da się ostylować.</li>
+                <li>Komunikatów o błędach nie da się łatwo zmienić.</li>
+                <li>Nie sprawdzimy zależności między polami (np. powtórz hasło) ani tego, czy login jest wolny.</li>
+                <li>Po wysłaniu strona się przeładowuje.</li>
+                <li>Walidację w przeglądarce można ominąć, więc serwer i tak musi sprawdzać dane.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>GET i POST</h2>
+            <p>
+                Przy GET dane są widoczne w adresie strony, więc nie nadaje się do haseł.
+                POST wysyła dane w treści żądania i pasuje do logowania.
+            </p>
+        </section>
+
+        <section>
+            <h2>Moje obserwacje</h2>
+            <p>
+                Najłatwiej poszło mi z samym budowaniem formularza w HTML-u. Wystarczyło wybrać odpowiedni type dla każdego pola (email, date, number, color, password), 
+                dzięki temu przeglądarka pokazuje kalendarz przy dacie, paletę przy kolorze i ukrywa znaki w haśle.
+            </p>
+            <p>
+                Łatwa była też walidacja. Walidację dało się zrobić samym HTML-em. Do required dopisałam maxlength dla imienia i nazwiska oraz min i max dla liczby prac. 
+                Jak zostawiłam puste pole albo wpisałam liczbę spoza zakresu, przeglądarka nie wysłała formularza i pokazała, które pole jest błędne.
+            </p>
+            <p>
+                Przycisk ciemnieje po najechaniu dzięki :hover, a cursor: pointer zmienia kursor na rączkę na przycisku, etykietach i polach wyboru.
+            </p>
+        </section>
+    </main>
+</body>
+
+</html>
